@@ -1,0 +1,43 @@
+# Archivo de entrada de prueba para el Taller 2
+# Formato: Operación [parámetros...]
+# Operaciones:
+#   N índice nombre num_coeficientes coef0 coef1 ...
+#   F idx1 idx2 resultado  # Fusión (suma)
+#   D idx1 idx2 resultado  # Diferenciación (resta)
+#   M idx1 idx2 resultado  # Interacción (multiplicación)
+#   P idx x              # Predicción (evaluación)
+#   R idx resultado       # Derivada
+#   L idx resultado       # Normalización
+#   I idx a b            # Integral desde a hasta b
+#   C idx_outer idx_inner resultado  # Composición
+
+# Cargar NAPs de ejemplo
+N 0 ThunderBolt 3 2.0 1.5 -0.3
+N 1 Phantom 3 1.0 -1.0 0.5
+N 2 Eclipse 2 3.0 2.0
+N 3 Nova 2 1.0 1.0
+
+# Operaciones de fusión y diferenciación
+F 0 1 4
+D 0 1 5
+
+# Interacción no-lineal
+M 0 2 6
+
+# Predicción de respuesta neuronal
+P 0 2.0
+
+# Derivada para cálculo de gradientes
+R 0 7
+
+# Normalización de respuesta
+L 0 8
+
+# Integral de energía
+I 0 0.0 5.0
+
+# Composición para redes profundas
+C 0 1 9
+
+# Fin del archivo
+END
